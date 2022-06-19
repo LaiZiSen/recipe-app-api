@@ -1,7 +1,7 @@
 FROM python:3.9-alpine3.13
 LABEL maintainer="https://github.com/LaiZiSen"
 
-ENV PYTHONUNBUFFERED 1 
+ENV PYTHONUNBUFFERED 1
 
 COPY ./requirements.txt /tmp/requirements.txt
 COPY ./app /app
@@ -19,4 +19,4 @@ RUN python -m venv /py && \
 
 ENV PATH="/py/bin:$PATH"
 
-USER django_user
+USER django-user
